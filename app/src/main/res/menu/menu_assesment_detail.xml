@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/saveAssessment"
+        android:title="@string/save_assessment" />
+    <item
+        android:id="@+id/editAssessment"
+        android:title="@string/edit_assessment" />
+    <item
+        android:id="@+id/deleteAssessment"
+        android:title="@string/delete_assessment" />
+</menu>

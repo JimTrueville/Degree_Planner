@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Degree Planner</string>
+    <string name="add_course_button">add_button</string>
+    <string name="add_sample_courses">Add Sample Code</string>
+    <string name="edit">Edit</string>
+    <string name="edit_courses">Edit Courses</string>
+    <string name="date_format">%d/%d/%d</string>
+    <string name="course_name">(Course Name)</string>
+    <string name="start_date">(Start Date)</string>
+    <string name="end_date">(End Date)</string>
+    <string name="instructor_name">(Instructor Name)</string>
+    <string name="plan_to_take">Plan To Take</string>
+    <string name="dropped">Dropped</string>
+    <string name="complete">Complete</string>
+    <string name="in_progress">In Progress</string>
+    <string name="status">Status :</string>
+    <string name="course_name_text">Course Name :</string>
+    <string name="start_date_text">Start Date :</string>
+    <string name="end_date_text">End Date :</string>
+    <string name="instructor_name_text">Instructor :</string>
+    <string name="notes_text">Notes :</string>
+    <string name="save_assessment">Save</string>
+    <string name="delete_assessment">Delete</string>
+    <string name="edit_assessment">Edit</string>
+    <string name="save_term">Save</string>
+    <string name="edit_term">Edit</string>
+    <string name="delete_term">Delete</string>
+    <string name="name">Name</string>
+    <string name="instructor_email">(Instructor Email)</string>
+    <string name="email">Email :</string>
+    <string name="phone">Phone :</string>
+    <string name="instructor_phone">(Instructor Phone)</string>
+    <string name="course_notes">Course Notes :</string>
+    <string name="add_notes_course_notes_here">Add Notes Course Notes Here</string>
+    <string name="add_course_notes_here">Add Course Notes Here...</string>
+    <string name="exit">Exit</string>
+    <string name="sample_data">Sample Data</string>
+    <string name="sample_date">Sample Date</string>
+
+
+</resources>
