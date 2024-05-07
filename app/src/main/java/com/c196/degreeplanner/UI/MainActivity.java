@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Button;
 
 import com.c196.degreeplanner.R;
@@ -34,4 +36,20 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item)
+    {if (item.getItemId() == R.id.exitApp) {
+        finishAffinity();
+        System.exit(0);
+        return true;
+    }
+        return false;
+    }
+
 }

@@ -36,6 +36,7 @@
     <string name="exit">Exit</string>
     <string name="sample_data">Sample Data</string>
     <string name="sample_date">Sample Date</string>
+    <string name="exit_app">Exit App</string>
 
 
 </resources>
