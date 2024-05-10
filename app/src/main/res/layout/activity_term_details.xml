@@ -6,4 +6,110 @@
     android:layout_height="match_parent"
     tools:context=".UI.TermDetails">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="411dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="3dp"
+        android:background="#ff6750a4"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:text="@string/tittle"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/assessmentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/term_title"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:textColor="#000000"
+            android:textColorHint="#ffffff"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+         </LinearLayout>
+
+
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:text="@string/start_date_text"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/startDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="@string/start_date"
+            android:inputType="date"
+            android:paddingStart="10dp"
+            android:paddingEnd="5dp"
+            android:textColor="#000000"
+            android:textColorHint="#ffffff"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:text="@string/end_date_text"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/endDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="@string/end_date"
+            android:inputType="date"
+            android:paddingStart="10dp"
+            android:paddingEnd="5dp"
+            android:textColor="#000000"
+            android:textColorHint="#ffffff"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

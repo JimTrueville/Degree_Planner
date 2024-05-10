@@ -37,6 +37,14 @@
     <string name="sample_data">Sample Data</string>
     <string name="sample_date">Sample Date</string>
     <string name="exit_app">Exit App</string>
+    <string name="tittle">Tittle:</string>
+    <string name="assessment_title">(Assessment Title)</string>
+    <string name="type">Type:</string>
+    <string name="assessment_type">(Assessment Type)</string>
+    <string name="term_title">(Term Title)</string>
+    <string name="addCourseButton">addCourseButton</string>
+    <string name="add_assessment_button">Add Assessment Button</string>
+    <string name="add_term_button">Add Term Button</string>
 
 
 </resources>

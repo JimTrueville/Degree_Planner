@@ -28,7 +28,7 @@ public class CoursesList extends AppCompatActivity {
         setContentView(R.layout.activity_course_list);
         Repository repository = new Repository(getApplication());
         repository.openDatabase();
-        FloatingActionButton fab = findViewById(R.id.AddCourseButton);
+        FloatingActionButton fab = findViewById(R.id.addCourseButton);
 
         fab.setOnClickListener(v -> {
             Intent intent = new Intent(CoursesList.this, courseDetails.class);
