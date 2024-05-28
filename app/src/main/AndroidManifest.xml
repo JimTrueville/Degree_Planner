@@ -16,24 +16,24 @@
             android:name=".UI.AssessmentDetails"
             android:exported="false"
             android:label="Assessment Details"
-            android:parentActivityName=".UI.AssessmentsList"/>
+            android:parentActivityName=".UI.AssessmentList"/>
         <activity
             android:name=".UI.TermDetails"
             android:label="Term Details"
-            android:parentActivityName=".UI.TermsList"
+            android:parentActivityName=".UI.TermList"
             android:exported="false" />
         <activity
-            android:name=".UI.AssessmentsList"
+            android:name=".UI.AssessmentList"
             android:exported="false"
             android:label="Assessments"
             android:parentActivityName=".UI.MainActivity"/>
         <activity
-            android:name=".UI.TermsList"
+            android:name=".UI.TermList"
             android:exported="false"
             android:label="Terms"
             android:parentActivityName=".UI.MainActivity" />
         <activity
-            android:name=".UI.courseDetails"
+            android:name=".UI.CourseDetails"
             android:exported="false"
             android:label="Course Details"
             android:windowSoftInputMode="adjustResize"

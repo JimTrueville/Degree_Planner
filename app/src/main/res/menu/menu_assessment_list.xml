@@ -4,6 +4,6 @@
     <item android:id="@+id/assessmentSampleData"
         android:title="@string/sample_date" />
 
-    <item android:id="@+id/assessmentExit"
+    <item android:id="@+id/assessmentListExit"
         android:title="Exit" />
 </menu>

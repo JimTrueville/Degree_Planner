@@ -6,6 +6,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.c196.degreeplanner.Database.Repository;
 import com.c196.degreeplanner.Entities.Assessments;
@@ -16,6 +18,7 @@ import com.c196.degreeplanner.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Date;
+import java.util.List;
 
 public class CoursesList extends AppCompatActivity {
 
@@ -26,14 +29,20 @@ public class CoursesList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_list);
-        Repository repository = new Repository(getApplication());
-        repository.openDatabase();
         FloatingActionButton fab = findViewById(R.id.addCourseButton);
 
         fab.setOnClickListener(v -> {
-            Intent intent = new Intent(CoursesList.this, courseDetails.class);
+            Intent intent = new Intent(CoursesList.this, CourseDetails.class);
             startActivity(intent);
         });
+
+        RecyclerView recyclerView= findViewById(R.id.courseRecyclerView);
+        Repository repository = new Repository(getApplication());
+        List<Courses> allCourses= repository.getAllCourses();
+        final CourseAdapter courseAdapter= new CourseAdapter(this);
+        recyclerView.setAdapter(courseAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        courseAdapter.setCourses(allCourses);
 
         // System.out.println(getIntent(). getStringExtra("test"));
     }
@@ -52,8 +61,10 @@ public class CoursesList extends AppCompatActivity {
 
         if (item.getItemId() == R.id.sampleData) {
             Repository repository = new Repository(getApplication());
-            Assessments assessments = new Assessments("Mobile Applications Development", "Performance Assessment", startDate, endDate, 1, 1);
-            repository.insert(assessments);
+            Assessments assessments1 = new Assessments("Mobile Applications Development", "Performance Assessment", startDate, endDate, 1, 1);
+            repository.insert(assessments1);
+            Assessments assessments2= new Assessments("Mobile Applications Development", "Objective Assessment", startDate, endDate, 1, 1);
+            repository.insert(assessments2);
             Courses courses = new Courses("Mobile Applications", startDate, endDate, "In Progress", "I Love Android Studio and Java", 1);
             repository.insert(courses);
             Instructors instructors = new Instructors("Juan Ruiz", "385-428-2843", "juan.ruiz@wgu.edu");

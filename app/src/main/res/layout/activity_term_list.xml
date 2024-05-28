@@ -5,11 +5,11 @@
     android:background="#ff6750a4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.AssessmentsList">
+    tools:context=".UI.TermList">
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/assessmentRecycleView"
+        android:id="@+id/termRecyclerViewer"
         android:layout_width="400dp"
         android:layout_height="613dp"
         android:background="#ffffff"
@@ -22,12 +22,13 @@
         app:layout_constraintVertical_bias="0.05" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addAssessmentButton"
+        android:id="@+id/addTermButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="20dp"
         android:clickable="true"
-        android:contentDescription="@string/add_assessment_button"
+        android:contentDescription="@string/add_term"
+        app:backgroundTint="#C593AD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.954"

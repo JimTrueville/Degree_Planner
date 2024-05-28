@@ -11,4 +11,7 @@
     <item
         android:id="@+id/deleteCourse"
         android:title="@string/delete_assessment" />
+    <item
+        android:id="@+id/courseExit"
+        android:title="Exit" />
 </menu>

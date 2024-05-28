@@ -5,12 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.courseDetails">
+    tools:context=".UI.CourseDetails">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".UI.courseDetails">
+        tools:context=".UI.CourseDetails">
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -34,7 +34,7 @@
                     android:paddingStart="10dp"
                     android:paddingEnd="0dp"
                     android:text="@string/course_name_text"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -46,7 +46,7 @@
                     android:inputType="text"
                     android:paddingStart="10dp"
                     android:paddingEnd="0dp"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:textColorHint="#ffffff"
                     android:textSize="12sp"
                     tools:ignore="Autofill" />
@@ -63,7 +63,7 @@
                     android:paddingStart="10dp"
                     android:paddingEnd="0dp"
                     android:text="@string/start_date_text"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -77,7 +77,7 @@
                     android:inputType="date"
                     android:paddingStart="10dp"
                     android:paddingEnd="5dp"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:textColorHint="#ffffff"
                     android:textSize="12sp"
                     tools:ignore="Autofill" />
@@ -94,7 +94,7 @@
                     android:paddingStart="10dp"
                     android:paddingEnd="0dp"
                     android:text="@string/end_date_text"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -108,7 +108,7 @@
                     android:inputType="date"
                     android:paddingStart="10dp"
                     android:paddingEnd="5dp"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:textColorHint="#ffffff"
                     android:textSize="12sp"
                     tools:ignore="Autofill" />
@@ -125,7 +125,7 @@
                     android:paddingStart="10dp"
                     android:paddingEnd="0dp"
                     android:text="@string/instructor_name_text"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -137,7 +137,7 @@
                     android:inputType="text"
                     android:paddingStart="10dp"
                     android:paddingEnd="5dp"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:textColorHint="#ffffff"
                     android:textSize="12sp"
                     tools:ignore="Autofill" />
@@ -155,7 +155,7 @@
                     android:paddingStart="10dp"
                     android:paddingEnd="0dp"
                     android:text="@string/email"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -167,7 +167,7 @@
                     android:inputType="textEmailAddress"
                     android:paddingStart="10dp"
                     android:paddingEnd="5dp"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:textColorHint="#ffffff"
                     android:textSize="12sp"
                     tools:ignore="Autofill" />
@@ -185,7 +185,7 @@
                     android:paddingStart="10dp"
                     android:paddingEnd="0dp"
                     android:text="@string/phone"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -197,7 +197,7 @@
                     android:inputType="phone"
                     android:paddingStart="10dp"
                     android:paddingEnd="5dp"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:textColorHint="#ffffff"
                     android:textSize="12sp"
                     tools:ignore="Autofill" />
@@ -210,7 +210,7 @@
             android:id="@+id/statusText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="17dp"
             android:text="@string/status"
             android:textSize="12sp"
@@ -222,6 +222,7 @@
             android:id="@+id/statusRadioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginBottom="132dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -234,28 +235,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="@string/in_progress"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/completedRadio"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="@string/complete"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/droppedRadio"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="@string/dropped"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/planToTakeRadio"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="@string/plan_to_take"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
         </RadioGroup>
 
@@ -264,38 +269,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="100dp"
+            android:layout_marginEnd="102dp"
             android:text="@string/course_notes"
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-        <ScrollView
-            android:id="@+id/notesScroll"
-            android:layout_width="159dp"
-            android:layout_height="121dp"
+
+        <EditText
+            android:id="@+id/editCourseNotes"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginEnd="24dp"
             android:background="#ff6750a4"
-            android:isScrollContainer="true"
+            android:gravity="start"
+            android:hint="@string/add_notes_here"
+            android:inputType="textMultiLine"
+            android:minLines="5"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/notesText">
-
-            <EditText
-                android:id="@+id/editCourseNotes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="start"
-                android:hint="@string/add_course_notes_here"
-                android:inputType="textMultiLine"
-                android:minLines="10"
-                android:padding="10dp"
-                android:textColor="#000000"
-                android:textColorHint="#ffffff"
-                android:textSize="12sp"
-                tools:ignore="Autofill" />
-
-        </ScrollView>
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notesText"
+            tools:ignore="Autofill" />
 
         <ImageView
             android:id="@+id/shareNotes"
@@ -306,10 +307,11 @@
             android:layout_marginBottom="192dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/notesScroll"
+            app:layout_constraintTop_toBottomOf="@+id/editCourseNotes"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@android:drawable/ic_menu_share"
-            app:tint="#ff6750a4" />
+            app:tint="#ff54397c"
+            android:contentDescription="@string/share_notes" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

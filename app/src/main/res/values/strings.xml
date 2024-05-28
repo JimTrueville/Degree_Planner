@@ -31,8 +31,6 @@
     <string name="phone">Phone :</string>
     <string name="instructor_phone">(Instructor Phone)</string>
     <string name="course_notes">Course Notes :</string>
-    <string name="add_notes_course_notes_here">Add Notes Course Notes Here</string>
-    <string name="add_course_notes_here">Add Course Notes Here...</string>
     <string name="exit">Exit</string>
     <string name="sample_data">Sample Data</string>
     <string name="sample_date">Sample Date</string>
@@ -42,9 +40,15 @@
     <string name="type">Type:</string>
     <string name="assessment_type">(Assessment Type)</string>
     <string name="term_title">(Term Title)</string>
-    <string name="addCourseButton">addCourseButton</string>
-    <string name="add_assessment_button">Add Assessment Button</string>
     <string name="add_term_button">Add Term Button</string>
+    <string name="add_assessment_button">Add Assessment Button</string>
+    <string name="add_notes_here">Add Notes Here:</string>
+    <string name="share_notes">Share Notes</string>
+    <string name="add_assessment">Add Assessment</string>
+    <string name="add_term">Add Term</string>
+    <string name="add_course">Add Course</string>
+    <string name="exit_assessment">Exit Assessment</string>
+    <string name="textview">TextView</string>
 
 
 </resources>

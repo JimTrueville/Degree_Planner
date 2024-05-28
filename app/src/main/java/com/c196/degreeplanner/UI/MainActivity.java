@@ -26,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         button2.setOnClickListener(v -> {
-                Intent intent=new Intent(MainActivity.this, TermsList.class);
+                Intent intent=new Intent(MainActivity.this, TermList.class);
                 startActivity(intent);
         });
 
         button3.setOnClickListener(v -> {
 
-                Intent intent=new Intent(MainActivity.this, AssessmentsList.class);
+                Intent intent=new Intent(MainActivity.this, AssessmentList.class);
                 startActivity(intent);
         });
     }

@@ -11,4 +11,6 @@
     <item
         android:id="@+id/deleteAssessment"
         android:title="@string/delete_assessment" />
+    <item android:id="@+id/assessmentDetailExit"
+        android:title="Exit" />
 </menu>
