@@ -17,17 +17,16 @@ public class Courses {
     private Date endDate;
     private String status;
     private String notes;
-    private int instructorID;
+    private int termID;
 
-
-
-    public Courses(String courseName, Date startDate, Date endDate, String status, String notes, int instructorID) {
+    public Courses(int courseID, String courseName, Date startDate, Date endDate, String status, String notes, int termID) {
+        this.courseID = courseID;
         this.courseName = courseName;
         this.startDate = startDate;
         this.endDate = endDate;
         this.status = status;
         this.notes = notes;
-        this.instructorID = instructorID;
+        this.termID = termID;
     }
 
     //Getters
@@ -56,7 +55,7 @@ public class Courses {
     }
 
     public int getInstructorID() {
-        return instructorID;
+        return termID;
     }
 
     //Setters
@@ -81,6 +80,6 @@ public class Courses {
     }
 
     public void setInstructorID(int instructorID) {
-        this.instructorID = instructorID;
+        this.termID = instructorID;
     }
 }

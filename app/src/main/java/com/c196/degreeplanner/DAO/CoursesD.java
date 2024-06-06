@@ -25,4 +25,7 @@ public interface CoursesD {
     @Query("SELECT * FROM Courses ORDER BY courseID ASC")
     List<Courses> getAllCourses();
 
+    @Query("SELECT * FROM courses WHERE termID = :termID")
+    List<Courses> getAssociatedCourses(int termID);
+
 }

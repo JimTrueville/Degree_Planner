@@ -7,13 +7,13 @@ import java.util.Date;
 public class DateConverter {
 
     @TypeConverter
-    public static Date toDate(Long _tmp){
-        return _tmp== null ? null : new Date(_tmp);
+    public static Long toTimestamp(Date date) {
+        return date == null ? null : date.getTime();
     }
 
     @TypeConverter
-    public static Long toTimestamp(Date date) {
-        return date == null ? null : date.getTime();
+    public static Date toDate(Long timestamp) {
+        return timestamp == null ? null : new Date(timestamp);
     }
 }
 

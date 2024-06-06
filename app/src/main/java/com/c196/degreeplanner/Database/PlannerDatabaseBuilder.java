@@ -31,14 +31,16 @@ public abstract class PlannerDatabaseBuilder extends RoomDatabase {
 
     public static synchronized PlannerDatabaseBuilder getInstance(final Context context) {
         if (INSTANCE == null) {
-                INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                                PlannerDatabaseBuilder.class, "Degree Planner")
-                        .fallbackToDestructiveMigration()
-                        .build();
+            synchronized (PlannerDatabaseBuilder.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
+                                    PlannerDatabaseBuilder.class, "DegreePlannerDatabase")
+                            .fallbackToDestructiveMigration()
+                            .build();
+                }
             }
-
+        }
         return INSTANCE;
-
     }
 
 }

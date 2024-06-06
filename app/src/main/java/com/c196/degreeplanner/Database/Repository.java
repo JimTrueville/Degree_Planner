@@ -28,7 +28,8 @@ public class Repository {
     private List<Instructors> mAllInstructors;
     private List<Terms> mAllTerms;
 
-    //Don't forget to add get all associated lists or something like that
+    private List<Courses> mAssociatedCourses;
+
 
     private static final int NUMBER_OF_THREADS = 4;
     static final ExecutorService databaseExecutor= Executors.newFixedThreadPool(NUMBER_OF_THREADS);
@@ -41,176 +42,87 @@ public class Repository {
         mTermsD = db.termsD();
     }
 
-    public void openDatabase(){
-        Terms terms = new Terms("test", new Date(), new Date());
-        this.insert(terms);
-        this.delete(terms);
-    }
-
     public List<Assessments>getAllAssessments(){
-        databaseExecutor.execute(() ->{
-            mAllAssessments = mAssessmentsD.getAllAssessments();
-        });
-        try {
-            Thread.sleep(1000);
-        }catch (InterruptedException e){
-            throw new RuntimeException(e);
-        }
+        databaseExecutor.execute(() ->
+                mAllAssessments = mAssessmentsD.getAllAssessments());
+        awaitExecution();
         return mAllAssessments;
     }
 
     public void insert(Assessments assessments){
-        databaseExecutor.execute(()->{
-            mAssessmentsD.insert(assessments);
-        });
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        databaseExecutor.execute(()-> mAssessmentsD.insert(assessments));
+       awaitExecution();
     }
     public void update(Assessments assessments){
-        databaseExecutor.execute(()->{
-            mAssessmentsD.update(assessments);
-        });
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        databaseExecutor.execute(()-> mAssessmentsD.update(assessments));
+      awaitExecution();
     }
     public void delete(Assessments assessments){
-        databaseExecutor.execute(()->{
-            mAssessmentsD.delete(assessments);
-        });
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        databaseExecutor.execute(()-> mAssessmentsD.delete(assessments));
+        awaitExecution();
     }
     public List<Courses>getAllCourses(){
-        databaseExecutor.execute(()->{
-            mAllCourses=mCoursesD.getAllCourses();
-        });
-
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        databaseExecutor.execute(()-> mAllCourses = mCoursesD.getAllCourses());
+        awaitExecution();
         return mAllCourses;
     }
-    public void insert(Courses courses){
-        databaseExecutor.execute(()->{
-            mCoursesD.insert(courses);
-        });
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public void insert(Courses courses) {
+        databaseExecutor.execute(() -> mCoursesD.insert(courses));
+        awaitExecution();
     }
     public void update(Courses courses){
-        databaseExecutor.execute(()->{
-            mCoursesD.update(courses);
-        });
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        databaseExecutor.execute(()-> mCoursesD.update(courses));
+        awaitExecution();
     }
     public void delete(Courses courses){
-        databaseExecutor.execute(()->{
-            mCoursesD.delete(courses);
-        });
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        databaseExecutor.execute(()-> mCoursesD.delete(courses));
+        awaitExecution();
+    }
+
+    public List<Courses>getAssociatedCourses(int termId){
+        databaseExecutor.execute(()-> mAssociatedCourses = mCoursesD.getAssociatedCourses(termId));
+        awaitExecution();
+        return mAssociatedCourses;
+
     }
 
     public List<Instructors>getAllInstructors(){
-        databaseExecutor.execute(()->{
-            mAllInstructors=mInstructorsD.getAllInstructors();
-        });
-
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        databaseExecutor.execute(()-> mAllInstructors = mInstructorsD.getAllInstructors());
+        awaitExecution();
         return mAllInstructors;
     }
 
     public void insert(Instructors instructors){
-        databaseExecutor.execute(()->{
-            mInstructorsD.insert(instructors);
-        });
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        databaseExecutor.execute(()-> mInstructorsD.insert(instructors));
+        awaitExecution();
     }
     public void update(Instructors instructors){
-        databaseExecutor.execute(()->{
-            mInstructorsD.update(instructors);
-        });
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        databaseExecutor.execute(()-> mInstructorsD.update(instructors));
+        awaitExecution();
     }
     public void delete(Instructors instructors){
-        databaseExecutor.execute(()->{
-            mInstructorsD.delete(instructors);
-        });
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        databaseExecutor.execute(()-> mInstructorsD.delete(instructors));
+        awaitExecution();
     }
     public List<Terms>getAllTerms(){
-        databaseExecutor.execute(()->{
-            mAllTerms=mTermsD.getAllTerms();
-        });
-
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        databaseExecutor.execute(()-> mAllTerms = mTermsD.getAllTerms());
+        awaitExecution();
         return mAllTerms;
     }
     public void insert(Terms terms){
-        databaseExecutor.execute(()->{
-            mTermsD.insert(terms);
-        });
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        databaseExecutor.execute(()-> mTermsD.insert(terms));
+        awaitExecution();
     }
     public void update(Terms terms){
-        databaseExecutor.execute(()->{
-            mTermsD.update(terms);
-        });
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        databaseExecutor.execute(()-> mTermsD.update(terms));
+        awaitExecution();
     }
     public void delete(Terms terms){
-        databaseExecutor.execute(()->{
-            mTermsD.delete(terms);
-        });
+        databaseExecutor.execute(()-> mTermsD.delete(terms));
+        awaitExecution();
+    }
+
+    private void awaitExecution() {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

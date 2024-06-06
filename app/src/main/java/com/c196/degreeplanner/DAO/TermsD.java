@@ -24,6 +24,10 @@ public interface TermsD {
     @Delete
     void delete(Terms terms);
 
-    @Query("SELECT * FROM Terms ORDER BY termID ASC")
+    @Query("SELECT * FROM terms ORDER BY termID ASC")
     List<Terms> getAllTerms();
+
+    /** @Query("SELECT * FROM terms WHERE termID = :termID LIMIT 1")
+    Terms getTermById(int termID);
+    */
 }

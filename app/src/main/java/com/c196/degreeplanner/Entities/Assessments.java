@@ -1,5 +1,6 @@
 package com.c196.degreeplanner.Entities;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
@@ -11,7 +12,9 @@ import java.util.Date;
 public class Assessments {
 
     @PrimaryKey(autoGenerate = true)
+
     public int assessmentID;
+
 
     private String assessmentTittle;
     private String assessmentType;

@@ -1,5 +1,6 @@
 package com.c196.degreeplanner.Entities;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -14,7 +15,9 @@ public class Terms {
     public int termID;
 
     private String termTitle;
+
     private Date startDate;
+
     private Date endDate;
 
     //Constructor
@@ -44,6 +47,10 @@ public class Terms {
     }
 
     //Setters
+
+    public void setTermID(int termID) {
+        this.termID = termID;
+    }
 
     public void setTermTitle(String termTitle) {
         this.termTitle = termTitle;

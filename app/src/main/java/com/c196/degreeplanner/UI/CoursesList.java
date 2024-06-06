@@ -65,7 +65,7 @@ public class CoursesList extends AppCompatActivity {
             repository.insert(assessments1);
             Assessments assessments2= new Assessments("Mobile Applications Development", "Objective Assessment", startDate, endDate, 1, 1);
             repository.insert(assessments2);
-            Courses courses = new Courses("Mobile Applications", startDate, endDate, "In Progress", "I Love Android Studio and Java", 1);
+            Courses courses = new Courses(1, "Mobile Applications",startDate, endDate, "In Progress", "I Love Android Studio and Java", 1);
             repository.insert(courses);
             Instructors instructors = new Instructors("Juan Ruiz", "385-428-2843", "juan.ruiz@wgu.edu");
             repository.insert(instructors);
