@@ -49,6 +49,10 @@
     <string name="add_course">Add Course</string>
     <string name="exit_assessment">Exit Assessment</string>
     <string name="textview">TextView</string>
+    <string name="courses">Courses</string>
+    <string name="assessments">Assessments</string>
+    <string name="terms">Terms</string>
+    <string name="degree_planner">Degree Planner</string>
 
 
 </resources>

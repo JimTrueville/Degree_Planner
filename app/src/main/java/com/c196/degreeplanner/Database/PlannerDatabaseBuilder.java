@@ -29,7 +29,7 @@ public abstract class PlannerDatabaseBuilder extends RoomDatabase {
     private static volatile PlannerDatabaseBuilder INSTANCE;
 
 
-    public static synchronized PlannerDatabaseBuilder getInstance(final Context context) {
+    static PlannerDatabaseBuilder getDatabase(final Context context) {
         if (INSTANCE == null) {
             synchronized (PlannerDatabaseBuilder.class) {
                 if (INSTANCE == null) {
@@ -42,5 +42,4 @@ public abstract class PlannerDatabaseBuilder extends RoomDatabase {
         }
         return INSTANCE;
     }
-
 }

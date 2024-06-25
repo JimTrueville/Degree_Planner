@@ -61,9 +61,9 @@ public class CoursesList extends AppCompatActivity {
 
         if (item.getItemId() == R.id.sampleData) {
             Repository repository = new Repository(getApplication());
-            Assessments assessments1 = new Assessments("Mobile Applications Development", "Performance Assessment", startDate, endDate, 1, 1);
+            Assessments assessments1 = new Assessments("Mobile Applications Development", "Performance Assessment", startDate, endDate);
             repository.insert(assessments1);
-            Assessments assessments2= new Assessments("Mobile Applications Development", "Objective Assessment", startDate, endDate, 1, 1);
+            Assessments assessments2= new Assessments("Mobile Applications Development", "Objective Assessment", startDate, endDate);
             repository.insert(assessments2);
             Courses courses = new Courses(1, "Mobile Applications",startDate, endDate, "In Progress", "I Love Android Studio and Java", 1);
             repository.insert(courses);

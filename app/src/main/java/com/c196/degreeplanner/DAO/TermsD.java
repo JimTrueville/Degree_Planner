@@ -8,6 +8,7 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
+import com.c196.degreeplanner.Entities.Courses;
 import com.c196.degreeplanner.Entities.Terms;
 
 import java.util.List;
@@ -27,7 +28,7 @@ public interface TermsD {
     @Query("SELECT * FROM terms ORDER BY termID ASC")
     List<Terms> getAllTerms();
 
-    /** @Query("SELECT * FROM terms WHERE termID = :termID LIMIT 1")
-    Terms getTermById(int termID);
-    */
+    @Query("SELECT * FROM terms WHERE termID = :courseID")
+    List<Terms> getAssociatedTerms(int courseID);
+
 }

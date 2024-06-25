@@ -14,6 +14,7 @@ import com.c196.degreeplanner.Utils.KeyBoardMngr;
 
 public class TermDetails extends AppCompatActivity {
 
+    private EditText termTitle;
     private EditText startDate;
     private EditText endDate;
     private DatePicker datePicker;

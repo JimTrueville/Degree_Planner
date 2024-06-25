@@ -27,15 +27,14 @@ public class Repository {
     private List<Courses> mAllCourses;
     private List<Instructors> mAllInstructors;
     private List<Terms> mAllTerms;
-
-    private List<Courses> mAssociatedCourses;
+    private List<Terms> mAssociatedTerms;
 
 
     private static final int NUMBER_OF_THREADS = 4;
     static final ExecutorService databaseExecutor= Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
     public Repository(Application application){
-        PlannerDatabaseBuilder db=PlannerDatabaseBuilder.getInstance(application);
+        PlannerDatabaseBuilder db=PlannerDatabaseBuilder.getDatabase(application);
         mAssessmentsD = db.assessmentsD();
         mCoursesD = db.coursesD();
         mInstructorsD = db.instructorsD();
@@ -79,13 +78,6 @@ public class Repository {
         awaitExecution();
     }
 
-    public List<Courses>getAssociatedCourses(int termId){
-        databaseExecutor.execute(()-> mAssociatedCourses = mCoursesD.getAssociatedCourses(termId));
-        awaitExecution();
-        return mAssociatedCourses;
-
-    }
-
     public List<Instructors>getAllInstructors(){
         databaseExecutor.execute(()-> mAllInstructors = mInstructorsD.getAllInstructors());
         awaitExecution();
@@ -120,6 +112,13 @@ public class Repository {
     public void delete(Terms terms){
         databaseExecutor.execute(()-> mTermsD.delete(terms));
         awaitExecution();
+    }
+
+    public List<Terms>getAssociatedTerms(int courseId){
+        databaseExecutor.execute(()-> mAllTerms = mTermsD.getAssociatedTerms(courseId));
+        awaitExecution();
+        return mAllTerms;
+
     }
 
     private void awaitExecution() {

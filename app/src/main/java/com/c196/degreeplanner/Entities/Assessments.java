@@ -16,20 +16,18 @@ public class Assessments {
     public int assessmentID;
 
 
-    private String assessmentTittle;
+    private String assessmentTitle;
     private String assessmentType;
     private Date startDate;
     private Date endDate;
-    private int courseID;
-    private int termID;
 
-    public Assessments(String assessmentTittle, String assessmentType, Date startDate, Date endDate, int courseID, int termID) {
-        this.assessmentTittle = assessmentTittle;
+
+    public Assessments(String assessmentTitle, String assessmentType, Date startDate, Date endDate) {
+        this.assessmentTitle = assessmentTitle;
         this.assessmentType = assessmentType;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.courseID = courseID;
-        this.termID = termID;
+
     }
 
     //Getters
@@ -37,8 +35,8 @@ public class Assessments {
         return assessmentID;
     }
 
-    public String getAssessmentTittle() {
-        return assessmentTittle;
+    public String getAssessmentTitle() {
+        return assessmentTitle;
     }
 
     public String getAssessmentType() {
@@ -53,17 +51,10 @@ public class Assessments {
         return endDate;
     }
 
-    public int getCourseID() {
-        return courseID;
-    }
-
-    public int getTermID() {
-        return termID;
-    }
 
     //Setters
-    public void setAssessmentTittle(String assessmentTittle) {
-        this.assessmentTittle = assessmentTittle;
+    public void setAssessmentTitle(String assessmentTitle) {
+        this.assessmentTitle = assessmentTitle;
     }
 
     public void setAssessmentType(String assessmentType) {
@@ -78,11 +69,4 @@ public class Assessments {
         this.endDate = endDate;
     }
 
-    public void setCourseID(int courseID) {
-        this.courseID = courseID;
-    }
-
-    public void setTermID(int termID) {
-        this.termID = termID;
-    }
 }

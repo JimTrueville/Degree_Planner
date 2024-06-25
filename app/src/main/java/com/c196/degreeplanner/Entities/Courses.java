@@ -54,9 +54,8 @@ public class Courses {
         return notes;
     }
 
-    public int getInstructorID() {
-        return termID;
-    }
+    public int getTermID() { return termID; }
+
 
     //Setters
     public void setCourseName(String courseName) {
@@ -78,8 +77,5 @@ public class Courses {
     public void setNotes(String notes) {
         this.notes = notes;
     }
-
-    public void setInstructorID(int instructorID) {
-        this.termID = instructorID;
-    }
+    public void setTermID(int termID) { this.termID = termID;}
 }

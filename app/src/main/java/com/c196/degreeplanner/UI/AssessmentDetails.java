@@ -14,6 +14,10 @@ import com.c196.degreeplanner.Utils.KeyBoardMngr;
 
 public class AssessmentDetails extends AppCompatActivity {
 
+    private EditText assessmentTitle;
+
+    private EditText assessmentType;
+
     private EditText startDate;
     private EditText endDate;
     private DatePicker datePicker;

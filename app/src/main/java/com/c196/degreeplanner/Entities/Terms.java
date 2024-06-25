@@ -20,6 +20,7 @@ public class Terms {
 
     private Date endDate;
 
+
     //Constructor
 
     public Terms(String termTitle, Date startDate, Date endDate) {
