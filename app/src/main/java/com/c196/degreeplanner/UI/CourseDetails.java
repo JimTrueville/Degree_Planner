@@ -33,14 +33,14 @@ public class CourseDetails extends AppCompatActivity {
         startDate.setOnClickListener(v -> {
             KeyBoardMngr.hideKeyboard(CourseDetails.this, v);
             datePicker.showDatePickerDialog((view, year, month, dayOfMonth) -> {
-                startDate.setText((month + 1) + "/" + dayOfMonth + "/" + year);
+                startDate.setText(String.format(getString(R.string.date_format), (month + 1), dayOfMonth, year));
             });
         });
 
         endDate.setOnClickListener(v -> {
             KeyBoardMngr.hideKeyboard(CourseDetails.this, v);
             datePicker.showDatePickerDialog((view, year, month, dayOfMonth) -> {
-                endDate.setText((month + 1) + "/" + dayOfMonth + "/" + year);
+                endDate.setText(String.format(getString(R.string.date_format), (month + 1), dayOfMonth, year));
             });
         });
 

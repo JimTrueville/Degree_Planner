@@ -14,7 +14,7 @@ import com.c196.degreeplanner.Utils.KeyBoardMngr;
 
 public class TermDetails extends AppCompatActivity {
 
-    private EditText termTitle;
+    private EditText term;
     private EditText startDate;
     private EditText endDate;
     private DatePicker datePicker;
@@ -31,14 +31,14 @@ public class TermDetails extends AppCompatActivity {
         startDate.setOnClickListener(v -> {
             KeyBoardMngr.hideKeyboard(TermDetails.this, v);
             datePicker.showDatePickerDialog((view, year, month, dayOfMonth) -> {
-                startDate.setText((month + 1) + "/" + dayOfMonth + "/" + year);
+                startDate.setText(String.format(getString(R.string.date_format), (month + 1), dayOfMonth, year));
             });
         });
 
         endDate.setOnClickListener(v -> {
             KeyBoardMngr.hideKeyboard(TermDetails.this, v);
             datePicker.showDatePickerDialog((view, year, month, dayOfMonth) -> {
-                endDate.setText((month + 1) + "/" + dayOfMonth + "/" + year);
+                endDate.setText(String.format(getString(R.string.date_format), (month + 1), dayOfMonth, year));
             });
         });
     }

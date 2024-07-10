@@ -28,7 +28,4 @@ public interface TermsD {
     @Query("SELECT * FROM terms ORDER BY termID ASC")
     List<Terms> getAllTerms();
 
-    @Query("SELECT * FROM terms WHERE termID = :courseID")
-    List<Terms> getAssociatedTerms(int courseID);
-
 }

@@ -53,6 +53,7 @@
     <string name="assessments">Assessments</string>
     <string name="terms">Terms</string>
     <string name="degree_planner">Degree Planner</string>
+    <string name="mm_dd_yyyy">MM-DD-YYYY</string>
 
 
 </resources>

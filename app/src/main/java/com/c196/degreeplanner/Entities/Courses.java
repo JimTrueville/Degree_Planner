@@ -77,5 +77,7 @@ public class Courses {
     public void setNotes(String notes) {
         this.notes = notes;
     }
-    public void setTermID(int termID) { this.termID = termID;}
+    public void setTermID(int termID) {
+        this.termID = termID;
+    }
 }

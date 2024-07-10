@@ -14,9 +14,9 @@ import com.c196.degreeplanner.Utils.KeyBoardMngr;
 
 public class AssessmentDetails extends AppCompatActivity {
 
-    private EditText assessmentTitle;
+    private EditText editTitle;
 
-    private EditText assessmentType;
+    private EditText editType;
 
     private EditText startDate;
     private EditText endDate;
@@ -27,6 +27,9 @@ public class AssessmentDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assessment_details);
 
+         editTitle = findViewById(R.id.assessmentTitle);
+         editType = findViewById(R.id.assessmentType);
+
         startDate = findViewById(R.id.startDate);
         endDate = findViewById(R.id.endDate);
         datePicker = new DatePicker(this);
@@ -34,14 +37,14 @@ public class AssessmentDetails extends AppCompatActivity {
         startDate.setOnClickListener(v -> {
             KeyBoardMngr.hideKeyboard(AssessmentDetails.this, v);
             datePicker.showDatePickerDialog((view, year, month, dayOfMonth) -> {
-                startDate.setText((month + 1) + "/" + dayOfMonth + "/" + year);
+                startDate.setText(String.format(getString(R.string.date_format), (month + 1), dayOfMonth, year));
             });
         });
 
         endDate.setOnClickListener(v -> {
             KeyBoardMngr.hideKeyboard(AssessmentDetails.this, v);
             datePicker.showDatePickerDialog((view, year, month, dayOfMonth) -> {
-                endDate.setText((month + 1) + "/" + dayOfMonth + "/" + year);
+                endDate.setText(String.format(getString(R.string.date_format), (month + 1), dayOfMonth, year));
             });
         });
     }

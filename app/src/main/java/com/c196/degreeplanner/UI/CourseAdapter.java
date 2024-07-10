@@ -80,7 +80,11 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
 
     }
 
-    @Override
+    public void setCourses(List<Courses> courses) {
+        mCourses= courses;
+        notifyDataSetChanged();
+    }
+
     public int getItemCount() {
         if (mCourses!= null){
             return mCourses.size();
@@ -88,8 +92,4 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
         else return 0;
     }
 
-    public void setCourses(List<Courses> courses) {
-        mCourses= courses;
-        notifyDataSetChanged();
-    }
 }

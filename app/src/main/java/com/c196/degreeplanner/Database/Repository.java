@@ -18,16 +18,16 @@ import java.util.concurrent.Executors;
 
 public class Repository {
 
-    private AssessmentsD mAssessmentsD;
-    private CoursesD mCoursesD;
-    private InstructorsD mInstructorsD;
-    private TermsD mTermsD;
+    private final AssessmentsD mAssessmentsD;
+    private final CoursesD mCoursesD;
+    private final InstructorsD mInstructorsD;
+    private final TermsD mTermsD;
 
     private List<Assessments> mAllAssessments;
     private List<Courses> mAllCourses;
     private List<Instructors> mAllInstructors;
     private List<Terms> mAllTerms;
-    private List<Terms> mAssociatedTerms;
+
 
 
     private static final int NUMBER_OF_THREADS = 4;
@@ -65,6 +65,14 @@ public class Repository {
         awaitExecution();
         return mAllCourses;
     }
+
+    public List<Courses>getAssociatedCourses(int termId){
+        databaseExecutor.execute(()-> mAllCourses = mCoursesD.getAssociatedCourses(termId));
+        awaitExecution();
+        return mAllCourses;
+
+    }
+
     public void insert(Courses courses) {
         databaseExecutor.execute(() -> mCoursesD.insert(courses));
         awaitExecution();
@@ -112,13 +120,6 @@ public class Repository {
     public void delete(Terms terms){
         databaseExecutor.execute(()-> mTermsD.delete(terms));
         awaitExecution();
-    }
-
-    public List<Terms>getAssociatedTerms(int courseId){
-        databaseExecutor.execute(()-> mAllTerms = mTermsD.getAssociatedTerms(courseId));
-        awaitExecution();
-        return mAllTerms;
-
     }
 
     private void awaitExecution() {
